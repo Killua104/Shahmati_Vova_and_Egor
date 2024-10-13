@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <cmath>
 #define RULES "Rules.txt"
 #define BLACK
 #define WHITE
@@ -6,42 +7,42 @@ using namespace std;
 
 struct Shahmati
 {
-	struct field
+	struct Field
 	{
 		char pole[7][7];
 	};
 
-	struct figure
+	struct Figure
 	{
 		int type;
 		int color;
 		int x, y;
 	};
 
-	struct color
+	struct Color
 	{
 		int black;
 		int white;
 	};
 
-	struct score
+	struct Score
 	{
 		int dead_figures;
 	};
 
-	struct player
+	struct Player
 	{
 		char player1[30];
 		char player2[30];
 	};
 
-	struct match_history
+	struct MatchHistory
 	{
 		char winner[35];
 		int moves;
 	};
 
-	struct rules
+	struct Rules
 	{
 		FILE* fp = fopen(RULES, "r");
 	};
@@ -51,4 +52,5 @@ struct Shahmati
 int main()
 {
 	char figures[50][50]{ "пешка", "конь", "слон", "ладья", "ферзь", "король"};
+
 }
