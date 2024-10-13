@@ -1,14 +1,21 @@
-﻿struct Shahmati
+﻿#include <iostream>
+#define RULES "Rules.txt"
+#define BLACK
+#define WHITE
+using namespace std;
+
+struct Shahmati
 {
 	struct field
 	{
-		char kontur[7][7];
 		char pole[7][7];
 	};
 
 	struct figure
 	{
-
+		int type;
+		int color;
+		int x, y;
 	};
 
 	struct color
@@ -19,12 +26,13 @@
 
 	struct score
 	{
-
+		int dead_figures;
 	};
 
-	struct score
+	struct player
 	{
-
+		char player1[30];
+		char player2[30];
 	};
 
 	struct match_history
@@ -38,7 +46,7 @@
 		FILE* fp = fopen(RULES, "r");
 	};
 
-	};
+};
 
 int main()
 {
